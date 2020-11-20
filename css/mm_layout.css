@@ -1,0 +1,75 @@
+#app {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.mm_page {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.mm_warp {
+	clear: both;
+	float: none;
+}
+
+.mm_container {
+	width: 100%;
+	max-width: 75rem;
+	margin: auto;
+}
+
+.mm_row {
+	display: flex;
+	justify-content: center;
+}
+
+.mm_col {}
+
+/**
+ * 卡片
+ */
+.mm_card {
+	background: #fff;
+	border-radius: 0.25rem;
+	border: 1px solid rgba(125, 125, 125, 0.25);
+	box-shadow: 0 0.25rem 0.5rem 0 rgba(7, 17, 27, 0.1);
+	overflow: hidden;
+}
+
+.mm_card_head {
+	position: relative;
+	padding: var(--padding_small) var(--padding_base);
+}
+.mm_card_head~.mm_card_body {
+	border-top: 1px solid rgba(125, 125, 125, 0.25);
+	
+}
+
+.mm_card_foot {
+	position: relative;
+	padding: var(--padding_small) var(--padding_base);
+}
+
+.mm_card_body {
+	position: relative;
+	padding: var(--padding_base);
+}
+
+.mm_card_body~.mm_card_foot {
+	border-top: 1px solid rgba(125, 125, 125, 0.25);
+}
+
+
+/* ===  布局控制  === */
+.item-lr .mobile {
+	float: left;
+}
+.item-lr .title {
+	float: left;
+	line-height: var(--height_base);
+	margin-right: 1rem;
+}

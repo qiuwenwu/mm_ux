@@ -1,0 +1,9 @@
+.mm_page>header .mm_warp {
+	background: #373737;
+	color: #fff;
+	line-height: 2.5rem;
+}
+.mm_page>footer .mm_warp {
+	background: #FDFDFD;
+	line-height: 2.5rem;
+}
