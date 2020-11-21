@@ -102,12 +102,12 @@
 	--font_tip: 0.75rem;
 
 	/* 图片尺寸 */
-	--img_size_mini: 1.25rem;
-	--img_size_small: 1.5rem;
-	--img_size_base: 2rem;
-	--img_size_big: 3rem;
-	--img_size_larger: 4rem;
-	--img_size_huge: 6rem;
+	--img_size_mini: 1.5rem;
+	--img_size_small: 2rem;
+	--img_size_base: 3rem;
+	--img_size_big: 4.5rem;
+	--img_size_larger: 6rem;
+	--img_size_huge: 8rem;
 
 	/* 圆角 */
 	--radius_small: 0.25rem;

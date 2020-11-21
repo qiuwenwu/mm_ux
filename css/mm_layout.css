@@ -30,8 +30,13 @@
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
 }
+
+.mm_col {
+	overflow: hidden;
+}
+
 
 /**
  * 卡片
@@ -42,6 +47,7 @@
 	border: 1px solid rgba(125, 125, 125, 0.25);
 	box-shadow: 0 0.25rem 0.5rem 0 rgba(7, 17, 27, 0.1);
 	overflow: hidden;
+	height: 100%;
 }
 
 .mm_card_body {
@@ -64,23 +70,75 @@
 }
 
 /* 列表 */
-.mm_list {display:-webkit-flex;display:flex;flex-flow:row wrap;align-items:flex-start;justify-content:flex-start;}
-.mm_list>*{display:block;float:left;list-style:none;position:relative;min-width:8.333333%;}
+.mm_list,.mm_info {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
 
-ul.mm_list li {list-style:none;float:left;overflow:hidden;}
-ol.mm_list {list-style-type:none;counter-reset:step;counter-increment:step 0; padding-left: 2.75rem;}
-ol.mm_list li::before {content:counter(step);counter-increment:step;position:absolute;left:-1.75rem;top:50%;display:block;width:1.125rem;line-height:1.125rem;text-align:center;background-color:#afbfd4;border-radius:0.125rem;color:#fff;transform:translateY(-50%);letter-spacing:0;font-size:0.75rem;height:1.125rem;}
-ol.mm_list li:nth-child(1)::before {background-color:#f12f04;}
-ol.mm_list li:nth-child(2)::before {background-color:#ff5000;}
-ol.mm_list li:nth-child(3)::before {background-color:#ff9000;}
+.mm_list>*,.mm_info>* {
+	display: block;
+	float: left;
+	list-style: none;
+	position: relative;
+	min-width: 8.333333%;
+}
+
+ul.mm_list li {
+	list-style: none;
+	float: left;
+	overflow: hidden;
+}
+
+ol.mm_list {
+	list-style-type: none;
+	counter-reset: step;
+	counter-increment: step 0;
+	padding-left: 2.75rem;
+}
+
+ol.mm_list li::before {
+	content: counter(step);
+	counter-increment: step;
+	position: absolute;
+	left: -1.75rem;
+	top: 50%;
+	display: block;
+	width: 1.125rem;
+	line-height: 1.125rem;
+	text-align: center;
+	background-color: #afbfd4;
+	border-radius: 0.125rem;
+	color: #fff;
+	transform: translateY(-50%);
+	letter-spacing: 0;
+	font-size: 0.75rem;
+	height: 1.125rem;
+}
+
+ol.mm_list li:nth-child(1)::before {
+	background-color: #f12f04;
+}
+
+ol.mm_list li:nth-child(2)::before {
+	background-color: #ff5000;
+}
+
+ol.mm_list li:nth-child(3)::before {
+	background-color: #ff9000;
+}
 
 /* ===  布局控制  === */
 .mm_item {
 	overflow: hidden;
 	position: relative;
 	padding: var(--padding_small) var(--padding_base);
+	width: 100%;
 }
 
+.mm_item .title,
 .mm_item .content {
 	overflow: hidden;
 }
@@ -93,33 +151,62 @@ ol.mm_list li:nth-child(3)::before {background-color:#ff9000;}
 .item-lr .title {
 	float: left;
 	line-height: var(--height_base);
-	margin-right: var(--margin_base);
+	margin-right: var(--margin_small);
 	min-width: 2.5rem;
 }
 
-.item-lr.img-5 .content {
+.item-lr.img-mini .content {
 	line-height: var(--height_base);
 }
 
-.mobile .mm_item {
-	border-top: 1px solid var(--color_border);
-	border-bottom: 1px solid var(--color_border);
-	margin-top: -1px;
+.item-lr.img-small .content {
+	line-height: var(--height_base);
 }
 
-/* 基本元素 */
-.arrow::after,
-.item-arrow .mm_item::after {
-	position: absolute;
-	right: 1rem;
-	top: 50%;
-	transform: translateY(-50%) rotate(-45deg);
+.item-ltb .media {
+	float: left;
+	margin-right: var(--margin_base);
+}
+
+.item-rtb .media {
+	float: right;
+	margin-left: var(--margin_base);
+}
+
+
+.mobile .mm_item {
+	border-bottom: 1px solid var(--color_border);
+	margin-bottom: -1px;
+}
+
+.mm_info .mm_item {
+	border-top: none;
+	border-bottom: none;
+}
+
+.mm_info .title::after,
+.mm_info .content::after {
 	content: "";
-	padding: 3px;
 	display: block;
-	border: solid #999;
-	border-width: 0 1px 1px 0;
-	transition: all 0.2s;
+	border-bottom: 1px solid var(--color_border);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.mm_info .mm_item:last-child .title::after,
+.mm_info .mm_item:last-child .content::after {
+	content: none !important;
+}
+
+.mm_info.item-rtb.img-base .media~.title::after,
+.mm_info.item-rtb.img-base .media~.content::after {
+	width: calc(100% - var(--img_size_base) - var(--margin_base) * 2 - var(--padding_base));
+}
+
+.mm_info.item-rtb.img-big .media~.title::after,
+.mm_info.item-rtb.img-big .media~.content::after {
+	width: calc(100% - var(--img_size_big) - var(--margin_base) * 2 - var(--padding_base));
 }
 
 
@@ -146,6 +233,7 @@ ol.mm_list li:nth-child(3)::before {background-color:#ff9000;}
 .mobile textarea {
 	border: none;
 	padding: var(--padding_mini) 0;
+	min-width: auto;
 }
 
 .mobile select~input[type=text],
