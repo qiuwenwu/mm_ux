@@ -43,6 +43,7 @@
 }
 
 @media (min-width:576px) {
+
 	.container,
 	.container-sm {
 		max-width: 33.75rem
@@ -50,6 +51,7 @@
 }
 
 @media (min-width:768px) {
+
 	.container,
 	.container-md,
 	.container-sm {
@@ -58,6 +60,7 @@
 }
 
 @media (min-width:992px) {
+
 	.container,
 	.container-lg,
 	.container-md,
@@ -67,6 +70,7 @@
 }
 
 @media (min-width:1200px) {
+
 	.container,
 	.container-lg,
 	.container-md,
@@ -788,4 +792,628 @@
 		flex: 0 0 100%;
 		max-width: 100%
 	}
+}
+
+
+/* ===  对齐  === */
+.fr {
+	float: right !important;
+}
+
+.fl {
+	float: left !important;
+}
+
+.fc {
+	display: block !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.fn {
+	float: none !important;
+	clear: both;
+}
+
+.cl {
+	clear: left !important;
+}
+
+.cr {
+	clear: right !important;
+}
+
+.cc {
+	clear: both !important;
+}
+
+.cn {
+	clear: none !important;
+}
+
+/* ===  文本对齐  === */
+.center {
+	text-align: center !important;
+}
+
+.left {
+	text-align: left !important;
+}
+
+.right {
+	text-align: right !important;
+}
+
+/* ===  填充  === */
+/* 基础 */
+.pa {
+	padding: 1rem !important;
+}
+
+.pb {
+	padding-bottom: 1rem !important;
+}
+
+.pl {
+	padding-left: 1rem !important;
+}
+
+.plr {
+	padding-left: 1rem;
+	padding-right: 1rem !important;
+}
+
+.pr {
+	padding-right: 1rem !important;
+}
+
+.pt {
+	padding-top: 1rem !important;
+}
+
+.ptb {
+	padding-top: 1rem;
+	padding-bottom: 1rem !important;
+}
+
+.pn {
+	padding: 0 !important;
+}
+
+.pn-t {
+	padding-top: 0 !important;
+}
+
+.pn-b {
+	padding-bottom: 0 !important;
+}
+
+.pn-l {
+	padding-left: 0 !important;
+}
+
+.pn-r {
+	padding-right: 0 !important;
+}
+
+.pn-tb {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.pn-lr {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* 拓展 */
+.pa-0 {
+	padding: 0 !important;
+}
+
+.pt-0 {
+	padding-top: 0 !important;
+}
+
+.pr-0 {
+	padding-right: 0 !important;
+}
+
+.pl-0 {
+	padding-left: 0 !important;
+}
+
+.pb-0 {
+	padding-bottom: 0 !important;
+}
+
+.pa-1 {
+	padding: 0.25rem !important;
+}
+
+.pt-1 {
+	padding-top: 0.25rem !important;
+}
+
+.pr-1 {
+	padding-right: 0.25rem !important;
+}
+
+.pl-1 {
+	padding-left: 0.25rem !important;
+}
+
+.pb-1 {
+	padding-bottom: 0.25rem !important;
+}
+
+.pa-2 {
+	padding: 0.5rem !important;
+}
+
+.pt-2 {
+	padding-top: 0.5rem !important;
+}
+
+.pr-2 {
+	padding-right: 0.5rem !important;
+}
+
+.pl-2 {
+	padding-left: 0.5rem !important;
+}
+
+.pb-2 {
+	padding-bottom: 0.5rem !important;
+}
+
+.pa-3 {
+	padding: 1rem !important;
+}
+
+.pt-3 {
+	padding-top: 1rem !important;
+}
+
+.pr-3 {
+	padding-right: 1rem !important;
+}
+
+.pl-3 {
+	padding-left: 1rem !important;
+}
+
+.pb-3 {
+	padding-bottom: 1rem !important;
+}
+
+.pa-4 {
+	padding: 1.5rem !important;
+}
+
+.pt-4 {
+	padding-top: 1.5rem !important;
+}
+
+.pr-4 {
+	padding-right: 1.5rem !important;
+}
+
+.pl-4 {
+	padding-left: 1.5rem !important;
+}
+
+.pb-4 {
+	padding-bottom: 1.5rem !important;
+}
+
+.pa-5 {
+	padding: 2rem !important;
+}
+
+.pt-5 {
+	padding-top: 2rem !important;
+}
+
+.pr-5 {
+	padding-right: 2rem !important;
+}
+
+.pl-5 {
+	padding-left: 2rem !important;
+}
+
+.pb-5 {
+	padding-bottom: 2rem !important;
+}
+
+.ptb-1 {
+	padding-top: 0.25rem !important;
+	padding-bottom: 0.25rem !important;
+}
+
+.ptb-2 {
+	padding-top: 0.5rem !important;
+	padding-bottom: 0.5rem !important;
+}
+
+.ptb-3 {
+	padding-top: 1rem !important;
+	padding-bottom: 1rem !important;
+}
+
+.ptb-4 {
+	padding-top: 1.5rem !important;
+	padding-bottom: 1.5rem !important;
+}
+
+.ptb-5 {
+	padding-top: 2rem !important;
+	padding-bottom: 2rem !important;
+}
+
+.plr-1 {
+	padding-left: 0.25rem !important;
+	padding-right: 0.25rem !important;
+}
+
+.plr-2 {
+	padding-left: 0.5rem !important;
+	padding-right: 0.5rem !important;
+}
+
+.plr-3 {
+	padding-left: 1rem !important;
+	padding-right: 1rem !important;
+}
+
+.plr-4 {
+	padding-left: 1.5rem !important;
+	padding-right: 1.5rem !important;
+}
+
+.plr-5 {
+	padding-left: 2rem !important;
+	padding-right: 2rem !important;
+}
+
+
+/* ===  间距  === */
+.ma {
+	margin: 1rem !important;
+}
+
+.mb {
+	margin-bottom: 1rem !important;
+}
+
+.mc {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block;
+}
+
+.ml {
+	margin-left: 1rem !important;
+}
+
+.mlr {
+	margin-left: 1rem;
+	margin-right: 1rem !important;
+}
+
+.mr {
+	margin-right: 1rem !important;
+}
+
+.mt {
+	margin-top: 1rem !important;
+}
+
+.mtb {
+	margin-top: 1rem;
+	margin-bottom: 1rem !important;
+}
+
+.mn {
+	margin: 0 !important;
+}
+
+.mn-t {
+	margin-top: 0 !important;
+}
+
+.mn-r {
+	margin-right: 0 !important;
+}
+
+.mn-b {
+	margin-bottom: 0 !important;
+}
+
+.mn-l {
+	margin-left: 0 !important;
+}
+
+.mx {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.my {
+	position: absolute;
+	transform: translateY(-50%);
+}
+
+.mxy {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+/* 拓展 */
+.ma-0 {
+	margin: 0 !important;
+}
+
+.mt-0 {
+	margin-top: 0 !important;
+}
+
+.mr-0 {
+	margin-right: 0 !important;
+}
+
+.ml-0 {
+	margin-left: 0 !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.ma-1 {
+	margin: 0.25rem !important;
+}
+
+.mt-1 {
+	margin-top: 0.25rem !important;
+}
+
+.mr-1 {
+	margin-right: 0.25rem !important;
+}
+
+.ml-1 {
+	margin-left: 0.25rem !important;
+}
+
+.mb-1 {
+	margin-bottom: 0.25rem !important;
+}
+
+.ma-2 {
+	margin: 0.5rem !important;
+}
+
+.mt-2 {
+	margin-top: 0.5rem !important;
+}
+
+.mr-2 {
+	margin-right: 0.5rem !important;
+}
+
+.ml-2 {
+	margin-left: 0.5rem !important;
+}
+
+.mb-2 {
+	margin-bottom: 0.5rem !important;
+}
+
+.ma-3 {
+	margin: 1rem !important;
+}
+
+.mt-3 {
+	margin-top: 1rem !important;
+}
+
+.mr-3 {
+	margin-right: 1rem !important;
+}
+
+.ml-3 {
+	margin-left: 1rem !important;
+}
+
+.mb-3 {
+	margin-bottom: 1rem !important;
+}
+
+.ma-4 {
+	margin: 1.5rem !important;
+}
+
+.mt-4 {
+	margin-top: 1.5rem !important;
+}
+
+.mr-4 {
+	margin-right: 1.5rem !important;
+}
+
+.ml-4 {
+	margin-left: 1.5rem !important;
+}
+
+.mb-4 {
+	margin-bottom: 1.5rem !important;
+}
+
+.ma-5 {
+	margin: 2rem !important;
+}
+
+.mt-5 {
+	margin-top: 2rem !important;
+}
+
+.mr-5 {
+	margin-right: 2rem !important;
+}
+
+.ml-5 {
+	margin-left: 2rem !important;
+}
+
+.mb-5 {
+	margin-bottom: 2rem !important;
+}
+
+.mtb-1 {
+	margin-top: 0.25rem !important;
+	margin-bottom: 0.25rem !important;
+}
+
+.mtb-2 {
+	margin-top: 0.5rem !important;
+	margin-bottom: 0.5rem !important;
+}
+
+.mtb-3 {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+.mtb-4 {
+	margin-top: 1.5rem !important;
+	margin-bottom: 1.5rem !important;
+}
+
+.mtb-5 {
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
+}
+
+.mlr-1 {
+	margin-left: 0.25rem !important;
+	margin-right: 0.25rem !important;
+}
+
+.mlr-2 {
+	margin-left: 0.5rem !important;
+	margin-right: 0.5rem !important;
+}
+
+.mlr-3 {
+	margin-left: 1rem !important;
+	margin-right: 1rem !important;
+}
+
+.mlr-4 {
+	margin-left: 1.5rem !important;
+	margin-right: 1.5rem !important;
+}
+
+.mlr-5 {
+	margin-left: 2rem !important;
+	margin-right: 2rem !important;
+}
+
+
+/* ===  边框  === */
+.ba {
+	border: 1px solid #e5e5e5 !important;
+}
+
+.bb {
+	border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.bl {
+	border-left: 1px solid #e5e5e5 !important;
+}
+
+.blr {
+	border-left: 1px solid #e5e5e5 !important;
+	border-right: 1px solid #e5e5e5 !important;
+}
+
+.bn {
+	border: none !important;
+}
+
+.br {
+	border-right: 1px solid #e5e5e5 !important;
+}
+
+.bt {
+	border-top: 1px solid #e5e5e5 !important;
+}
+
+.btb {
+	border-top: 1px solid #e5e5e5 !important;
+	border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* ===  圆角  === */
+.b-a {
+	border-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-b {
+	border-bottom-right-radius: 0.25rem !important;
+	border-bottom-left-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-c {
+	border-radius: 50% !important;
+	overflow: hidden;
+}
+
+.b-l {
+	border-bottom-left-radius: 0.25rem !important;
+	border-top-left-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-n {
+	border-radius: 0 !important;
+	overflow: hidden;
+}
+
+.b-r {
+	border-bottom-right-radius: 0.25rem !important;
+	border-top-right-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-t {
+	border-top-left-radius: 0.25rem !important;
+	border-top-right-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-lb {
+	border-bottom-left-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-lt {
+	border-top-left-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-rb {
+	border-bottom-right-radius: 0.25rem !important;
+	overflow: hidden;
+}
+
+.b-rt {
+	border-top-right-radius: 0.25rem !important;
+	overflow: hidden;
 }

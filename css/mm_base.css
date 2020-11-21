@@ -1,4 +1,5 @@
 @charset utf-8;
+
 /* ===  全局变量  === */
 /* 
  * 使用说明 
@@ -79,9 +80,7 @@
 	--line_blue-2: linear-gradient(135deg, #dcffe0 0%, #2accfa 20%, #b14cff 100%);
 	--line_purple-1: linear-gradient(135deg, #ffe8dc 0%, #ff4cb5 20%, #cc2afa 100%);
 	--line_purple-2: linear-gradient(135deg, #ffe8dc 0%, #ec4cff 20%, #652afa 100%);
-}
 
-:root {
 	/* === 字体样式 === */
 	--font_family_number: "Helvetica Neue", helvetica;
 	--font_family_text: arial, sans-serif;
@@ -139,8 +138,8 @@
 	--col_larger: 1.5rem;
 
 	/* 填充 */
-	--padding_mini: 0.25rem;
-	--padding_small: 0.5rem;
+	--padding_mini: 0.5rem;
+	--padding_small: 0.75rem;
 	--padding_base: 1rem;
 	--padding_big: 1.25rem;
 	--padding_larger: 1.5rem;
@@ -159,19 +158,19 @@
 /* ::-webkit-datetime-edit{background:url(/img/select.png);padding:1px;} */
 /* ::-webkit-datetime-edit-fields-wrapper{background-color:#eee;} */
 /* ::-webkit-datetime-edit-text{color:#4D90FE; padding:0 .25rem; content: "-";} */
-::-webkit-datetime-edit-year-field {
+:-webkit-datetime-edit-year-field {
 	/* color:#38f; */
 }
 
-::-webkit-datetime-edit-month-field {
+:-webkit-datetime-edit-month-field {
 	/* color:#26d2ff; */
 }
 
-::-webkit-datetime-edit-day-field {
+:-webkit-datetime-edit-day-field {
 	/* color:#04BE02; */
 }
 
-::-webkit-inner-spin-button {
+:-webkit-inner-spin-button {
 	visibility: hidden;
 }
 
@@ -179,23 +178,23 @@
 
 
 /* 滚动条凹槽的颜色，还可以设置边框属性 */
-::-webkit-file-upload-button {
+:-webkit-file-upload-button {
 	-webkit-appearance: button;
 	font: inherit;
 }
 
-::-webkit-scrollbar-track-piece {
+:-webkit-scrollbar-track-piece {
 	background-color: #f8f8f8;
 }
 
 /* 滚动条的宽度 */
-::-webkit-scrollbar {
+:-webkit-scrollbar {
 	width: .5rem;
 	height: .5rem;
 }
 
 /* 滚动条的设置 */
-::-webkit-scrollbar-thumb {
+:-webkit-scrollbar-thumb {
 	background-color: rgba(0, 0, 0, 0.5);
 	background-clip: padding-box;
 	min-height: 1rem;
@@ -242,7 +241,7 @@ html {
 body {
 	height: 100%;
 	background-color: #ededed;
-	color: #333;
+	color: var(--color_base);
 	line-height: 1.5;
 	overflow-x: hidden;
 	overflow-y: auto;
@@ -412,16 +411,23 @@ input::before {
 	box-sizing: border-box;
 }
 
-input,textarea {
+input,
+textarea {
 	outline: none;
 }
-input[type=color]{
+
+input[type=color] {
+	height: 1.5rem;
 	border: 1px solid var(--color_border);
 	border-radius: var(--radius_small);
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
 }
+
 input[type=range] {
 	min-width: 13.25rem;
-	margin-top: 0.5rem;
+	margin-top: 0.75rem;
+	margin-bottom: 0.875rem;
 	/*上部分的填充值*/
 	outline: none;
 	-webkit-appearance: none;
@@ -433,18 +439,16 @@ input[type=range] {
 	/*横条的高度，细的真的比较好看嗯*/
 }
 
-input[type=range]::thumb,
-input[type=range]::-webkit-slider-thumb,
-input[type=range]::-moz-range-thumb,
-input[type=range]::-ms-thumb
-{  
-  -webkit-appearance: none;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  background: var(--color_info);
-  cursor: pointer;
-  margin-top: -14px;
+input[type=range]:-webkit-slider-thumb,
+input[type=range]:-moz-range-thumb,
+input[type=range]:-ms-thumb {
+	-webkit-appearance: none;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: var(--color_info);
+	cursor: pointer;
+	margin-top: -0.875rem;
 }
 
 input[type=text],
@@ -460,7 +464,7 @@ input[type=month],
 input[type=week],
 input[type=url] {
 	height: var(--height_base);
-	line-height: var(--height_base);
+	line-height: calc(var(--height_base) - 2px);
 	border-radius: var(--radius_small);
 	border: 1px solid var(--color_border);
 	padding-left: var(--padding_small);
@@ -482,23 +486,11 @@ input[type=checkbox] {
 	padding: 0;
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:focus,
-textarea:focus {
-	border-color: #38f;
-	/* box-shadow: 0 0 0 .25rem rgba(38, 210, 255, .25); */
-	z-index: 20;
-}
+
 
 /* 非法选择器 */
 input:invalid {
 	border-color: #f12f04;
-}
-
-button {
-	-webkit-appearance: button;
 }
 
 button,
@@ -514,6 +506,7 @@ select {
 }
 
 button {
+	-webkit-appearance: button;
 	border: 1px solid var(--color_border);
 	border-radius: var(--radius_small);
 	padding-left: .75rem;
@@ -555,6 +548,7 @@ select {
 	padding-right: 1.5rem;
 	min-width: 3rem;
 	word-wrap: normal;
+	text-align: center;
 }
 
 select[multiple] {
@@ -570,7 +564,7 @@ textarea {
 	padding: var(--padding_small);
 	border: 1px solid var(--color_border);
 	border-radius: var(--radius_small);
-	font: 400 13.3333px Arial;
+	font: 400 13.3333px;
 }
 
 form textarea {
@@ -604,7 +598,13 @@ fieldset {
 }
 
 
-/* ===  列表类  === */
+input:focus,
+textarea:focus {
+	border-color: #38f;
+	/* box-shadow: 0 0 0 .25rem rgba(38, 210, 255, .25); */
+	z-index: 20;
+}
+
 caption {
 	caption-side: bottom;
 	padding-bottom: var(--padding_small);
@@ -612,35 +612,7 @@ caption {
 	text-align: left;
 }
 
-th {
-	border: 1px solid var(--color_border);
-	padding: var(--padding_small) .75rem;
-	text-align: inherit;
-}
-
-thead th>span {
-	line-height: var(--height_base);
-}
-
-thead th {
-	border-bottom: 2px solid var(--color_border);
-	vertical-align: bottom;
-}
-
-tbody tr:hover {
-	background-color: rgba(0, 100, 200, .075) !important;
-}
-
-tbody tr.active {
-	background-color: rgba(0, 100, 200, .075) !important;
-}
-
-td {
-	border: 1px solid var(--color_border);
-	padding: var(--padding_small) .75rem;
-	white-space: nowrap;
-}
-
+/* ===  列表类  === */
 dt {
 	display: block;
 	clear: left;
@@ -706,6 +678,36 @@ ol {
 }
 
 
+th {
+	border: 1px solid var(--color_border);
+	padding: var(--padding_small) .75rem;
+	text-align: inherit;
+}
+
+thead th>span {
+	line-height: var(--height_base);
+}
+
+thead th {
+	border-bottom: 2px solid var(--color_border);
+	vertical-align: bottom;
+}
+
+tbody tr:hover {
+	background-color: rgba(0, 100, 200, .075) !important;
+}
+
+tbody tr.active {
+	background-color: rgba(0, 100, 200, .075) !important;
+}
+
+td {
+	border: 1px solid var(--color_border);
+	padding: var(--padding_small) .75rem;
+	white-space: nowrap;
+}
+
+
 
 /* ===  内容标签  === */
 sub,
@@ -755,10 +757,10 @@ abbr[data-original-title] {
 }
 
 /* ===  字体大小  === */
-	--font_mini: 0.75rem;
-	--font_small: 0.875rem;
-	: 1rem;
-	
+--font_mini: 0.75rem;
+--font_small: 0.875rem;
+: 1rem;
+
 h1,
 .h1 {
 	font-size: var(--font_huge);
