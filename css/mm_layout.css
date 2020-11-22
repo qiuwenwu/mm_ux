@@ -37,6 +37,14 @@
 	overflow: hidden;
 }
 
+.mm_grid {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
 
 /**
  * 卡片
@@ -179,11 +187,16 @@ ol.mm_list li:nth-child(3)::before {
 	margin-bottom: -1px;
 }
 
+
+
 .mm_info .mm_item {
 	border-top: none;
 	border-bottom: none;
 }
-
+.mm_info .title {
+	display: flex;
+	align-items: center;
+}
 .mm_info .title::after,
 .mm_info .content::after {
 	content: "";
@@ -194,10 +207,6 @@ ol.mm_list li:nth-child(3)::before {
 	width: 100%;
 }
 
-.mm_info .mm_item:last-child .title::after,
-.mm_info .mm_item:last-child .content::after {
-	content: none !important;
-}
 
 .mm_info.item-rtb.img-base .media~.title::after,
 .mm_info.item-rtb.img-base .media~.content::after {
@@ -209,6 +218,21 @@ ol.mm_list li:nth-child(3)::before {
 	width: calc(100% - var(--img_size_big) - var(--margin_base) * 2 - var(--padding_base));
 }
 
+
+.info-base .mm_item {
+	display: flex;
+}
+.info-base .mm_item .title {
+	min-width: 5rem;
+}
+
+.info-base .mm_item .content {
+	color: var(--color_default);
+	line-height: var(--height_base);
+}
+.info-base .mm_item .mm_grid {
+	width: 90%;
+}
 
 /* ===  表单  === */
 .mobile input[type=range],
