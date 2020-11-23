@@ -559,7 +559,6 @@ textarea {
 	overflow-x: hidden;
 	overflow-y: auto;
 	resize: vertical;
-	min-width: 20rem;
 	min-height: 10rem;
 	padding: var(--padding_small);
 	border: 1px solid var(--color_border);
@@ -906,4 +905,11 @@ section h2,
 section h3 {
 	padding-bottom: .25rem;
 	border-bottom: 1px solid #eaecef;
+}
+
+
+@media (max-width:576px) {
+	select ~ input {
+		margin-top: var(--margin_mini);
+	}
 }

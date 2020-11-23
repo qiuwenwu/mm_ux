@@ -142,7 +142,7 @@ ol.mm_list li:nth-child(3)::before {
 .mm_item {
 	overflow: hidden;
 	position: relative;
-	padding: var(--padding_small) var(--padding_base);
+	padding: var(--padding_mini) var(--padding_base);
 	width: 100%;
 }
 
@@ -163,8 +163,8 @@ ol.mm_list li:nth-child(3)::before {
 	min-width: 2.5rem;
 }
 
-.item-lr.img-mini .content {
-	line-height: var(--height_base);
+.item-lr.img-mini .title {
+	line-height: var(--height_small);
 }
 
 .item-lr.img-small .content {
@@ -207,7 +207,6 @@ ol.mm_list li:nth-child(3)::before {
 	width: 100%;
 }
 
-
 .mm_info.item-rtb.img-base .media~.title::after,
 .mm_info.item-rtb.img-base .media~.content::after {
 	width: calc(100% - var(--img_size_base) - var(--margin_base) * 2 - var(--padding_base));
@@ -218,6 +217,10 @@ ol.mm_list li:nth-child(3)::before {
 	width: calc(100% - var(--img_size_big) - var(--margin_base) * 2 - var(--padding_base));
 }
 
+.mm_info .content img {
+	max-width: 16.25rem;
+	max-height: 16.25rem;
+}
 
 .info-base .mm_item {
 	display: flex;
