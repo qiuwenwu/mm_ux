@@ -1,3 +1,51 @@
+/* 显示隐藏 */
+.show_phone {
+	display: none;
+}
+.show_pad {
+	display: none;
+}
+.show_pc {
+	display: none;
+}
+
+.hide_phone {
+	display: block;
+}
+.hide_pad {
+	display: block;
+}
+.hide_pc {
+	display: block;
+}
+
+@media (max-width:576px) {
+	.show_phone {
+		display: block;
+	}
+	.hide_phone {
+		display: none;
+	}
+}
+
+@media (min-width:576px and min-width:992px) {
+	.show_pad {
+		display: block;
+	}
+	.hide_pad {
+		display: none;
+	}
+}
+
+@media (min-width:1200px) {
+	.show_pc {
+		display: block;
+	}
+	.hide_pc {
+		display: none;
+	}
+}
+
 /* 基本元素 */
 .arrow,
 .item-arrow>* {
@@ -25,6 +73,7 @@
 .content-right .content {
 	text-align: right;
 }
+
 
 /* 栅格 */
 .row-1>* {
@@ -67,7 +116,7 @@
 .list-x>* {
 	margin-top: -1px;
 	margin-left: -1px;
-	border: 1px solid #DBDBDB;
+	border: 1px solid var(--color_border);
 }
 
 .list-1>* {
@@ -217,15 +266,13 @@
 .container-md,
 .container-sm,
 .container-xl {
+	max-width: initial;
 	width: 100%;
-	padding-right: var(--margin_base);
-	padding-left: var(--margin_base);
 	margin-right: auto;
-	margin-left: auto
+	margin-left: auto;
 }
 
 @media (min-width:576px) {
-
 	.container,
 	.container-sm {
 		max-width: 33.75rem
@@ -1720,20 +1767,20 @@
 
 /* ===  边框  === */
 .ba {
-	border: 1px solid #e5e5e5 !important;
+	border: 1px solid var(--color_border) !important;
 }
 
 .bb {
-	border-bottom: 1px solid #e5e5e5 !important;
+	border-bottom: 1px solid var(--color_border) !important;
 }
 
 .bl {
-	border-left: 1px solid #e5e5e5 !important;
+	border-left: 1px solid var(--color_border) !important;
 }
 
 .blr {
-	border-left: 1px solid #e5e5e5 !important;
-	border-right: 1px solid #e5e5e5 !important;
+	border-left: 1px solid var(--color_border) !important;
+	border-right: 1px solid var(--color_border) !important;
 }
 
 .bn {
@@ -1741,16 +1788,16 @@
 }
 
 .br {
-	border-right: 1px solid #e5e5e5 !important;
+	border-right: 1px solid var(--color_border) !important;
 }
 
 .bt {
-	border-top: 1px solid #e5e5e5 !important;
+	border-top: 1px solid var(--color_border) !important;
 }
 
 .btb {
-	border-top: 1px solid #e5e5e5 !important;
-	border-bottom: 1px solid #e5e5e5 !important;
+	border-top: 1px solid var(--color_border) !important;
+	border-bottom: 1px solid var(--color_border) !important;
 }
 
 /* ===  圆角  === */
@@ -1890,12 +1937,4 @@
 
 .img_h-mini .img {
 	height: var(--img_size_mini);
-}
-
-
-
-.card-m {
-	/* min-height: 10rem; */
-	margin: var(--margin_small);
-	height: calc(100% - var(--margin_base));
 }

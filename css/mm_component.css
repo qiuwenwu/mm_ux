@@ -1,0 +1,36 @@
+.mm_nav_main button {
+	line-height: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0;
+}
+.mm_bar_logo {
+	position: relative;
+	border-right: 1px solid rgba(0, 0, 0, 0.4);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+.mm_bar_logo:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mm_bar_logo:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.mm_bar_logo img {
+	max-height: 1.5rem;
+	margin: .5rem 1rem;
+}
+.mm_bar_logo span {
+	line-height: 2.25rem;
+}

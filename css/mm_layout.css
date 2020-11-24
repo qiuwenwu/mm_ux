@@ -6,9 +6,97 @@
 }
 
 .mm_page {
-	width: 100%;
 	height: 100%;
 	overflow: auto;
+}
+
+.mm_page>header {
+	min-height: 2.5rem;
+	display: block;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.mm_page>footer {
+	min-height: 1.5rem;
+	display: block;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	transition: all 0.5s ease;
+}
+
+.mm_side {
+	position: absolute;
+	z-index: 30;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 12rem;
+	transition: all 0.5s ease-in-out;
+}
+
+/* 
+.mm_page>.hide~header,
+.mm_page>.hide~footer,
+.mm_page>.hide~main
+{
+	padding-left: 12rem;
+}
+ */
+
+header.hide {
+	top: -100%;
+}
+
+footer.hide {
+	bottom: -100%;
+}
+
+.mm_side.flod ~ .mm_page {
+	padding-left: 0;
+}
+
+@media (max-width:576px) {
+	.mm_side.hide {
+		left: -100%;
+	}
+}
+
+@media (min-width:576px) {
+	.mm_side ~ .mm_page {
+		width: calc(100% - 12rem);
+	}
+}
+
+.mm_mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	display: block;
+	opacity: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: opacity .5s ease;
+	z-index: 20;
+}
+
+.mm_mask.show {
+	width: 100%;
+	height: 100%;
+	opacity: 1;
 }
 
 .mm_warp {
@@ -50,12 +138,10 @@
  * 卡片
  */
 .mm_card {
-	background: #fff;
-	border-radius: 0.25rem;
-	border: 1px solid rgba(125, 125, 125, 0.25);
-	box-shadow: 0 0.25rem 0.5rem 0 rgba(7, 17, 27, 0.1);
+	border-radius: var(--radius_small);
 	overflow: hidden;
-	height: 100%;
+	height: calc(100% - var(--margin_small) * 2);
+	margin: var(--margin_small);
 }
 
 .mm_card_body {
@@ -74,11 +160,11 @@
 .mm_card_foot {
 	position: relative;
 	padding: var(--padding_small) var(--padding_base);
-	border-top: 1px solid rgba(125, 125, 125, 0.25);
 }
 
 /* 列表 */
-.mm_list,.mm_info {
+.mm_list,
+.mm_info {
 	display: -webkit-flex;
 	display: flex;
 	flex-flow: row wrap;
@@ -86,7 +172,8 @@
 	justify-content: flex-start;
 }
 
-.mm_list>*,.mm_info>* {
+.mm_list>*,
+.mm_info>* {
 	display: block;
 	float: left;
 	list-style: none;
@@ -117,25 +204,11 @@ ol.mm_list li::before {
 	width: 1.125rem;
 	line-height: 1.125rem;
 	text-align: center;
-	background-color: #afbfd4;
 	border-radius: 0.125rem;
-	color: #fff;
 	transform: translateY(-50%);
 	letter-spacing: 0;
 	font-size: 0.75rem;
 	height: 1.125rem;
-}
-
-ol.mm_list li:nth-child(1)::before {
-	background-color: #f12f04;
-}
-
-ol.mm_list li:nth-child(2)::before {
-	background-color: #ff5000;
-}
-
-ol.mm_list li:nth-child(3)::before {
-	background-color: #ff9000;
 }
 
 /* ===  布局控制  === */
@@ -151,25 +224,6 @@ ol.mm_list li:nth-child(3)::before {
 	overflow: hidden;
 }
 
-.item-lr .media {
-	float: left;
-	margin-right: var(--margin_small);
-}
-
-.item-lr .title {
-	float: left;
-	line-height: var(--height_base);
-	margin-right: var(--margin_small);
-	min-width: 2.5rem;
-}
-
-.item-lr.img-mini .title {
-	line-height: var(--height_small);
-}
-
-.item-lr.img-small .content {
-	line-height: var(--height_base);
-}
 
 .item-ltb .media {
 	float: left;
@@ -187,16 +241,42 @@ ol.mm_list li:nth-child(3)::before {
 	margin-bottom: -1px;
 }
 
+.mm_group {
+	width: 100%;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	padding-left: 1px;
+	padding-right: 1px;
+}
 
+.mm_group>* {
+	margin-right: -1px;
+	flex: 1;
+	float: left;
+	border-radius: 0 !important;
+	white-space: nowrap;
+}
+
+.mm_group>*:focus {
+	z-index: 20;
+}
+
+.mm_group>*:first-child {
+	margin-left: -1px;
+}
 
 .mm_info .mm_item {
 	border-top: none;
 	border-bottom: none;
 }
+
 .mm_info .title {
 	display: flex;
 	align-items: center;
 }
+
 .mm_info .title::after,
 .mm_info .content::after {
 	content: "";
@@ -222,9 +302,30 @@ ol.mm_list li:nth-child(3)::before {
 	max-height: 16.25rem;
 }
 
+.item-lr .media {
+	float: left;
+	margin-right: var(--margin_small);
+}
+
+.item-lr .title {
+	float: left;
+	line-height: var(--height_base);
+	margin-right: var(--margin_small);
+	min-width: 2.5rem;
+}
+
+.item-lr.img-mini .title {
+	line-height: var(--height_small);
+}
+
+.item-lr.img-small .content {
+	line-height: var(--height_base);
+}
+
 .info-base .mm_item {
 	display: flex;
 }
+
 .info-base .mm_item .title {
 	min-width: 5rem;
 }
@@ -233,6 +334,7 @@ ol.mm_list li:nth-child(3)::before {
 	color: var(--color_default);
 	line-height: var(--height_base);
 }
+
 .info-base .mm_item .mm_grid {
 	width: 90%;
 }
@@ -270,4 +372,10 @@ ol.mm_list li:nth-child(3)::before {
 	padding-left: var(--padding_small);
 	padding-right: var(--padding_small);
 	width: initial;
+}
+
+.card-m {
+	/* min-height: 10rem; */
+	margin: var(--margin_small);
+	height: calc(100% - var(--margin_base));
 }

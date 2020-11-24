@@ -2,7 +2,7 @@
 
 /* ===  全局变量  === */
 /* 
- * 使用说明 
+ * 使用说明
  * _ 代表自身
  * -x 代表线框
  * -伪类名 表示对伪类控制, 例如: table-hover
@@ -19,7 +19,7 @@
 	--color_blue: #38f;
 	--color_purple: #7f39e8;
 
-	--color_black: #333;
+	--color_black: #373737;
 	--color_white: #fff;
 	--color_grey: #6a737d;
 	--color_light: #F9F9F9;
@@ -47,12 +47,12 @@
 
 
 	/* 场景色 */
-	--color_base: #333;
+	--color_base: #373737;
 	--color_title: #000;
-	--color_subtitle: #333;
+	--color_subtitle: #373737;
 	--color_describe: #666;
 	--color_paragraph: #666;
-	--color_tip: #999;
+	--color_tip: #6a737d;
 	--color_border: #dfe2e5;
 	--color_mask: rgba(0, 0, 0, 0.4);
 	--color_bg: #f6f6f9;
@@ -60,8 +60,7 @@
 
 	/* === 其他 === */
 	/* 透明度 */
-	--opacity_disabled: 0.3;
-
+	--opacity_disabled: 0.7;
 
 	/* 渐变 */
 	--line_red: linear-gradient(135deg, #FF5A6A 0%, #f12f04 100%);
@@ -240,7 +239,6 @@ html {
 
 body {
 	height: 100%;
-	background-color: #ededed;
 	color: var(--color_base);
 	line-height: 1.5;
 	overflow-x: hidden;
@@ -262,23 +260,13 @@ body {
 	display: none !important;
 }
 
-/* [disabled],.disabled { background: #ededed; } */
+
 [tabindex=-1]:focus:not(:focus-visible) {
 	outline: 0 !important;
 }
 
 
 /* ===  布局标签  === */
-header {
-	min-height: 2rem;
-	display: block;
-}
-
-footer {
-	min-height: 1.5rem;
-	display: block;
-}
-
 article {
 	overflow: hidden;
 }
@@ -287,28 +275,6 @@ article>header {
 	text-align: center;
 }
 
-article>footer {
-	padding: .5rem 2rem 2rem 2rem;
-}
-
-body>header,
-body>div>header {
-	z-index: 10;
-	left: 0;
-	right: 0;
-	top: 0;
-	color: #fff;
-	background: #373737;
-}
-
-body>footer,
-body>div>footer {
-	z-index: 10;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #F7F7F7;
-}
 
 blockquote {
 	margin: 0 0 var(--margin_base);
@@ -324,7 +290,6 @@ address {
 
 section {
 	position: relative;
-	padding: .5rem 2rem;
 }
 
 main {
@@ -382,19 +347,11 @@ form::after {
 }
 
 code {
-	font-size: 1rem;
-	padding: .5rem;
-}
-
-aside {
-	position: relative;
-	display: block;
-	margin: auto;
+	padding: var(--padding_small);
 }
 
 table {
-	background-color: #FFF;
-	border: 1px solid #dee2e6;
+	border: 1px solid var(--color_border);
 	border-collapse: collapse;
 	border-radius: var(--radius_small);
 	width: 100%;
@@ -452,32 +409,42 @@ input[type=range]:-ms-thumb {
 }
 
 input[type=text],
-input[type=number],
-input[type=password],
 input[type=tel],
 input[type=email],
+input[type=number],
+input[type=password],
+input[type=url],
 input[type=date],
 input[type=datetime],
 input[type=time],
 input[type=datetime-local],
 input[type=month],
-input[type=week],
-input[type=url] {
+input[type=week] {
 	height: var(--height_base);
 	line-height: calc(var(--height_base) - 2px);
 	border-radius: var(--radius_small);
 	border: 1px solid var(--color_border);
 	padding-left: var(--padding_small);
-	padding-right: var(--padding_small);
 	min-width: 13.25rem;
+}
+
+input[type=text],
+input[type=tel],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=url] {
+	padding-right: var(--padding_small);
 }
 
 input[type=date],
 input[type=datetime],
 input[type=time],
 input[type=datetime-local],
-input[type=month] {
+input[type=month],
+input[type=week] {
 	-webkit-appearance: listbox;
+	padding-right: var(--padding_mini);
 }
 
 input[type=radio],
@@ -490,7 +457,7 @@ input[type=checkbox] {
 
 /* 非法选择器 */
 input:invalid {
-	border-color: #f12f04;
+	border-color: var(--color_error);
 }
 
 button,
@@ -509,11 +476,10 @@ button {
 	-webkit-appearance: button;
 	border: 1px solid var(--color_border);
 	border-radius: var(--radius_small);
-	padding-left: .75rem;
-	padding-right: .75rem;
+	padding-left: var(--padding_small);
+	padding-right: var(--padding_small);
 	display: inline-block;
-	background-color: #fff;
-	color: #333;
+	min-width: 2.5rem;
 }
 
 [type=button],
@@ -534,18 +500,8 @@ button:focus {
 	outline: none;
 }
 
-button:active {
-	background: var(--color_border);
-	border-color: var(--color_border);
-}
-
 select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
-	background: url(/img/select.png) no-repeat scroll right center transparent;
 	padding-left: var(--padding_small);
-	padding-right: 1.5rem;
 	min-width: 3rem;
 	word-wrap: normal;
 	text-align: center;
@@ -570,13 +526,6 @@ form textarea {
 	width: 100%;
 }
 
-select:focus,
-button:focus,
-textarea:focus {
-	border-color: #38f;
-	z-index: 20;
-}
-
 .pc .multiple,
 .pc select[multiple],
 .pc select[size] {
@@ -596,11 +545,9 @@ fieldset {
 	min-width: 0;
 }
 
-
 input:focus,
-textarea:focus {
-	border-color: #38f;
-	/* box-shadow: 0 0 0 .25rem rgba(38, 210, 255, .25); */
+select:focus,
+button:focus {
 	z-index: 20;
 }
 
@@ -625,7 +572,7 @@ dt {
 dt.required::before {
 	position: absolute;
 	content: "*";
-	color: red;
+	color: var(--color_error);
 	left: 0;
 	top: 50%;
 	transform: translateY(-37.5%);
@@ -692,14 +639,6 @@ thead th {
 	vertical-align: bottom;
 }
 
-tbody tr:hover {
-	background-color: rgba(0, 100, 200, .075) !important;
-}
-
-tbody tr.active {
-	background-color: rgba(0, 100, 200, .075) !important;
-}
-
 td {
 	border: 1px solid var(--color_border);
 	padding: var(--padding_small) .75rem;
@@ -717,11 +656,11 @@ sup {
 }
 
 sub {
-	bottom: -.25em;
+	bottom: -0.25em;
 }
 
 sup {
-	top: -.5em;
+	top: -0.5em;
 }
 
 hr {
@@ -756,10 +695,6 @@ abbr[data-original-title] {
 }
 
 /* ===  字体大小  === */
---font_mini: 0.75rem;
---font_small: 0.875rem;
-: 1rem;
-
 h1,
 .h1 {
 	font-size: var(--font_huge);
@@ -782,12 +717,12 @@ h4,
 
 h5,
 .h5 {
-	font-size: 1rem;
+	font-size: var(--font_small);
 }
 
 h6,
 .h6 {
-	font-size: 0.875rem;
+	font-size: var(--font_mini);
 }
 
 h1,
@@ -863,22 +798,9 @@ nav>a {
 	display: inline-block;
 }
 
-header nav>a,
-footer nav>a {
-	font-size: .875rem;
-}
-
 a:hover,
 a:not([href]) {
 	text-decoration: none;
-}
-
-nav a:hover {
-	color: #38f;
-}
-
-nav a:active {
-	color: #317EF3;
 }
 
 /* 文章间距 */
@@ -904,12 +826,11 @@ section h1,
 section h2,
 section h3 {
 	padding-bottom: .25rem;
-	border-bottom: 1px solid #eaecef;
+	border-bottom: 1px solid var(--color_border);
 }
 
-
 @media (max-width:576px) {
-	select ~ input {
+	select~input {
 		margin-top: var(--margin_mini);
 	}
 }
