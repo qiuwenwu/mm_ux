@@ -21,7 +21,7 @@ main {
 }
 
 .mm_page>header {
-	min-height: 2.5rem;
+	min-height: var(--height_big);
 	display: block;
 	position: absolute;
 	z-index: 10;
@@ -36,7 +36,7 @@ main {
 }
 
 .mm_page>footer {
-	min-height: 1.5rem;
+	min-height: var(--height_small);
 	display: block;
 	position: absolute;
 	z-index: 10;
@@ -264,7 +264,7 @@ ol.mm_list li::before {
 	border-radius: 0.125rem;
 	transform: translateY(-50%);
 	letter-spacing: 0;
-	font-size: 0.75rem;
+	font-size: var(--font_mini);
 	height: 1.125rem;
 }
 

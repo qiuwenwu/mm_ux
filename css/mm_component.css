@@ -28,7 +28,7 @@
 }
 
 .mm_bar_logo img {
-	max-height: 1.5rem;
+	max-height: var(--img_size_mini);
 	margin: var(--margin_small);
 }
 
@@ -39,8 +39,8 @@
 
 /* ===  导航栏  === */
 .mm_nav_main button {
-	line-height: 2.5rem;
-	height: 2.5rem;
+	line-height: var(--height_big);
+	height: var(--height_big);
 	border-radius: 0;
 }
 
@@ -70,8 +70,8 @@
 
 .mm_nav_side .btn {
 	overflow: hidden;
-	line-height: 2.5rem;
-	padding: 0 .5rem;
+	line-height: var(--height_big);
+	padding: 0 var(--padding_mini);
 	color: #999;
 	font-size: var(--font_small);
 	position: relative;
@@ -111,7 +111,7 @@
 
 .mm_nav_side .active .box {
 	max-height: 80vh;
-	padding: 0.5rem 0;
+	padding: var(--padding_mini) 0;
 }
 
 .mm_nav_side .active .btn {
@@ -124,9 +124,9 @@
 
 .mm_nav_side a {
 	display: block;
-	line-height: 2.5rem;
+	line-height: var(--height_big);
 	padding-left: 2.5rem;
-	font-size: 0.875rem;
+	font-size: var(--font_small);
 	position: relative;
 }
 
@@ -138,5 +138,5 @@
 	float: left;
 	text-align: center;
 	min-width: 1.5rem;
-	margin-right: .5rem;
+	margin-right: var(--margin_small);
 }

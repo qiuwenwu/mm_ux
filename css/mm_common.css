@@ -1289,33 +1289,33 @@
 /* ===  填充  === */
 /* 基础 */
 .pa {
-	padding: 1rem !important;
+	padding: var(--padding_base) !important;
 }
 
 .pb {
-	padding-bottom: 1rem !important;
+	padding-bottom: var(--padding_base) !important;
 }
 
 .pl {
-	padding-left: 1rem !important;
+	padding-left: var(--padding_base) !important;
 }
 
 .plr {
-	padding-left: 1rem;
-	padding-right: 1rem !important;
+	padding-left: var(--padding_base);
+	padding-right: var(--padding_base) !important;
 }
 
 .pr {
-	padding-right: 1rem !important;
+	padding-right: var(--padding_base) !important;
 }
 
 .pt {
-	padding-top: 1rem !important;
+	padding-top: var(--padding_base) !important;
 }
 
 .ptb {
-	padding-top: 1rem;
-	padding-bottom: 1rem !important;
+	padding-top: var(--padding_base);
+	padding-bottom: var(--padding_base) !important;
 }
 
 .pn {
@@ -1390,83 +1390,83 @@
 }
 
 .pa-2 {
-	padding: 0.5rem !important;
+	padding: var(--padding_mini) !important;
 }
 
 .pt-2 {
-	padding-top: 0.5rem !important;
+	padding-top: var(--padding_mini) !important;
 }
 
 .pr-2 {
-	padding-right: 0.5rem !important;
+	padding-right: var(--padding_mini) !important;
 }
 
 .pl-2 {
-	padding-left: 0.5rem !important;
+	padding-left: var(--padding_mini) !important;
 }
 
 .pb-2 {
-	padding-bottom: 0.5rem !important;
+	padding-bottom: var(--padding_mini) !important;
 }
 
 .pa-3 {
-	padding: 1rem !important;
+	padding: var(--padding_base) !important;
 }
 
 .pt-3 {
-	padding-top: 1rem !important;
+	padding-top: var(--padding_base) !important;
 }
 
 .pr-3 {
-	padding-right: 1rem !important;
+	padding-right: var(--padding_base) !important;
 }
 
 .pl-3 {
-	padding-left: 1rem !important;
+	padding-left: var(--padding_base) !important;
 }
 
 .pb-3 {
-	padding-bottom: 1rem !important;
+	padding-bottom: var(--padding_base) !important;
 }
 
 .pa-4 {
-	padding: 1.5rem !important;
+	padding: var(--padding_larger) !important;
 }
 
 .pt-4 {
-	padding-top: 1.5rem !important;
+	padding-top: var(--padding_larger) !important;
 }
 
 .pr-4 {
-	padding-right: 1.5rem !important;
+	padding-right: var(--padding_larger) !important;
 }
 
 .pl-4 {
-	padding-left: 1.5rem !important;
+	padding-left: var(--padding_larger) !important;
 }
 
 .pb-4 {
-	padding-bottom: 1.5rem !important;
+	padding-bottom: var(--padding_larger) !important;
 }
 
 .pa-5 {
-	padding: 2rem !important;
+	padding: var(--padding_huge) !important;
 }
 
 .pt-5 {
-	padding-top: 2rem !important;
+	padding-top: var(--padding_huge) !important;
 }
 
 .pr-5 {
-	padding-right: 2rem !important;
+	padding-right: var(--padding_huge) !important;
 }
 
 .pl-5 {
-	padding-left: 2rem !important;
+	padding-left: var(--padding_huge) !important;
 }
 
 .pb-5 {
-	padding-bottom: 2rem !important;
+	padding-bottom: var(--padding_huge) !important;
 }
 
 .ptb-1 {
@@ -1475,23 +1475,23 @@
 }
 
 .ptb-2 {
-	padding-top: 0.5rem !important;
-	padding-bottom: 0.5rem !important;
+	padding-top: var(--padding_mini) !important;
+	padding-bottom: var(--padding_mini) !important;
 }
 
 .ptb-3 {
-	padding-top: 1rem !important;
-	padding-bottom: 1rem !important;
+	padding-top: var(--padding_base) !important;
+	padding-bottom: var(--padding_base) !important;
 }
 
 .ptb-4 {
-	padding-top: 1.5rem !important;
-	padding-bottom: 1.5rem !important;
+	padding-top: var(--padding_larger) !important;
+	padding-bottom: var(--padding_larger) !important;
 }
 
 .ptb-5 {
-	padding-top: 2rem !important;
-	padding-bottom: 2rem !important;
+	padding-top: var(--padding_huge) !important;
+	padding-bottom: var(--padding_huge) !important;
 }
 
 .plr-1 {
@@ -1500,23 +1500,23 @@
 }
 
 .plr-2 {
-	padding-left: 0.5rem !important;
-	padding-right: 0.5rem !important;
+	padding-left: var(--padding_mini) !important;
+	padding-right: var(--padding_mini) !important;
 }
 
 .plr-3 {
-	padding-left: 1rem !important;
-	padding-right: 1rem !important;
+	padding-left: var(--padding_base) !important;
+	padding-right: var(--padding_base) !important;
 }
 
 .plr-4 {
-	padding-left: 1.5rem !important;
-	padding-right: 1.5rem !important;
+	padding-left: var(--padding_larger) !important;
+	padding-right: var(--padding_larger) !important;
 }
 
 .plr-5 {
-	padding-left: 2rem !important;
-	padding-right: 2rem !important;
+	padding-left: var(--padding_huge) !important;
+	padding-right: var(--padding_huge) !important;
 }
 
 
