@@ -35,27 +35,49 @@
 	<body>
 		<div id="app">
 			<!-- 页面 -->
-			<div class="mm_side" :class="{hide: hide}">
-				<div class="mm_bar_logo">
-					<img src="../img/logo.png" src="" /><span>超级美眉</span>
-				</div>
-				<div class="mm_nav_side">
-				</div>
-			</div>
-
-			<!-- 页面 -->
 			<div class="mm_page" id="page_root">
+				<!-- 页侧栏 -->
+				<div class="mm_side" :class="{hide: hide, fold: fold}">
+					<div class="mm_warp">
+						<div class="mm_bar_logo">
+							<img src="../img/logo.png" src="" /><span>超级美眉</span>
+						</div>
+						<div class="mm_nav_side">
+							<div class="mm_item" :class="{active: select === 1}">
+								<a href="#" class="btn" @click="select = 1">
+									<figure class="mm_icon"><i class="fa-cog"></i></figure> <span>系统</span>
+								</a>
+								<div class="box">
+									<a href="/admin/sys/ad" class=""><span>地区</span></a>
+									<a href="/admin/sys/address_city" class=""><span>城市</span></a>
+									<a href="/admin/sys/address_province" class=""><span>省份</span></a>
+								</div>
+							</div>
+							<div class="mm_item" :class="{active: select === 2}">
+								<div class="btn" @click="select = 2">
+									<figure class="mm_icon"><i class="fa-user"></i></figure> <span>用户</span>
+								</div>
+								<div class="box">
+									<a href="/admin/user/account" class=""><span>用户账户</span></a>
+									<a href="/admin/user/admin" class=""><span>管理组</span></a>
+									<a href="/admin/user/count" class=""><span>用户统计</span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mask" @click="hide = !hide"></div>
+				</div>
 				<!-- 页头 -->
 				<header>
 					<!-- 外套 -->
 					<div class="mm_warp">
 						<!-- 容器 -->
-						<div class="mm_container container-fluid">
+						<div class="mm_container">
 							<!-- 行 -->
 							<div class="mm_row">
 								<div class="col-12">
 									<div class="mm_nav_main">
-										<button class="btn_link btn_primary show_pc" @click="fold = !fold"><i class="fa-bars"></i></button>
+										<button class="btn_link btn_primary hide_phone" @click="fold = !fold"><i class="fa-bars"></i></button>
 										<button class="btn_link btn_primary show_phone" @click="hide = !hide"><i class="fa-bars"></i></button>
 									</div>
 								</div>
@@ -99,7 +121,7 @@
 				</footer>
 
 				<!-- 模态窗 -->
-				<div class="mm_modal">
+				<div class="mm_modal hide">
 					<!-- 弹窗 -->
 					<div class="popup">
 						<!-- 卡片 -->
@@ -108,7 +130,6 @@
 					<div class="mask"></div>
 				</div>
 			</div>
-			<div class="mm_mask" :class="{ show: !hide }" @click="hide = !hide"></div>
 		</div>
 		<script>
 			var app = new Vue({
@@ -116,7 +137,8 @@
 				data() {
 					return {
 						hide: true,
-						fold: false
+						fold: false,
+						select: 1
 					}
 				}
 			});

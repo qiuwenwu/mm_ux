@@ -51,7 +51,7 @@ body {
 	background: #FDFDFD;
 }
 
-.mm_side {
+.mm_side .mm_warp {
 	color: #fff;
 	background: var(--color_black);
 }
@@ -274,9 +274,6 @@ ol.mm_list li:nth-child(3)::before {
 }
 
 /* 默认配置 */
-.mask {
-	background: rgba(0, 0, 0, 0.3);
-}
 
 /* 边框 */
 .br_default {
