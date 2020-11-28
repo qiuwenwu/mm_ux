@@ -44,6 +44,7 @@
 	--color_primary_h: #51a6ff;
 	--color_default: #666;
 	--color_default_b: #444;
+	--color_default_h: #999;
 
 
 	/* 场景色 */
@@ -55,9 +56,12 @@
 	--color_tip: #6a737d;
 	--color_border: #dfe2e5;
 	--color_mask: rgba(0, 0, 0, 0.4);
-	--color_bg: #f6f6f9;
 	--color_shadow: rgba(7, 17, 27, 0.1);
-
+	
+	--bg_black: #24292e;
+	--bg_grey: #efeff4;
+	--bg_white: #FDFDFD;
+	
 	/* === 其他 === */
 	/* 透明度 */
 	--opacity_disabled: 0.7;

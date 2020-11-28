@@ -430,8 +430,7 @@ ol.mm_list li::before {
 	width: initial;
 }
 
-.card-m {
-	/* min-height: 10rem; */
+.card-full {
 	margin: var(--margin_small);
 	height: calc(100% - var(--margin_base));
 }
