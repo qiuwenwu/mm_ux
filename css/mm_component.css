@@ -38,7 +38,7 @@
 }
 
 /* ===  导航栏  === */
-.mm_nav_main button {
+.mm_nav_fast button {
 	line-height: var(--height_big);
 	height: var(--height_big);
 	border-radius: 0;
@@ -133,13 +133,68 @@
 	position: relative;
 }
 
-.mm_nav_side a:hover {
-	color: var(--color_white);
-}
 
 .mm_nav_side .mm_icon {
 	float: left;
 	text-align: center;
 	min-width: 1.5rem;
 	margin-right: var(--margin_small);
+}
+
+.mm_nav_top>button,
+.mm_nav_main>button {
+	display: none;
+}
+
+.mm_nav_top a,
+.mm_nav_main a {
+	display: inline-block;
+	font-size: var(--font_small);
+	padding: 0 var(--padding_small);
+}
+
+.mm_nav_top {
+	text-align: right;
+}
+
+@media (max-width:768px) {
+	.mm_nav_top>button,
+	.mm_nav_main>button {
+		display: inline-block;
+	}
+	
+	.mm_nav_top>nav,
+	.mm_nav_main>nav {
+		max-height: 0;
+		overflow: hidden;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		text-align: center;
+		z-index: 10;
+		padding: 0;
+		background: rgba(0, 0, 0, 0.75);
+		transition: max-height padding-top 0.3s ease-in-out;
+	}
+	
+	.mm_nav_top a,
+	.mm_nav_main a {
+		display: block;
+		padding: var(--padding_mini) 0;
+	}
+	
+	.mm_nav_top>.show,
+	.mm_nav_main>.show {
+		max-height: 100vh;
+		padding-top: 2.5rem;
+	}
+}
+
+@media (min-width:768px) {
+	
+}
+
+.mm_nav_side a:hover {
+	color: var(--color_white);
 }

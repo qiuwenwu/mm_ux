@@ -75,10 +75,22 @@
 						<div class="mm_container">
 							<!-- 行 -->
 							<div class="mm_row">
-								<div class="col-12">
-									<div class="mm_nav_main">
+								<div class="col-6">
+									<div class="mm_nav_fast">
 										<button class="btn_link btn_primary hide_phone" @click="fold = !fold"><i class="fa-bars"></i></button>
 										<button class="btn_link btn_primary show_phone" @click="hide = !hide"><i class="fa-bars"></i></button>
+									</div>
+								</div>
+
+								<div class="col-6">
+									<div class="mm_nav_top">
+										<button class="btn_link" @click="nav_main_show = !nav_main_show"><i class="fa fa-bars"></i></button>
+										<nav :class="{show: nav_main_show}">
+											<a href="#root" :class="{ active: hash === 'root' }" @click="nav_main_show = false"><span>首页</span></a>
+											<a href="#doc" :class="{ active: hash === 'doc' }" @click="nav_main_show = false"><span>文档</span></a>
+											<a href="#case" :class="{ active: hash === 'case' }" @click="nav_main_show = false"><span>案例</span></a>
+											<a href="#join" :class="{ active: hash === 'join' }" @click="nav_main_show = false"><span>加盟</span></a>
+										</nav>
 									</div>
 								</div>
 							</div>
@@ -138,7 +150,9 @@
 					return {
 						hide: true,
 						fold: false,
-						select: 1
+						hash: "root",
+						select: 1,
+						nav_main_show: false
 					}
 				}
 			});

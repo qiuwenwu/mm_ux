@@ -2,9 +2,11 @@
 .show_phone {
 	display: none;
 }
+
 .show_pad {
 	display: none;
 }
+
 .show_pc {
 	display: none;
 }
@@ -12,9 +14,11 @@
 .hide_phone {
 	display: block;
 }
+
 .hide_pad {
 	display: block;
 }
+
 .hide_pc {
 	display: block;
 }
@@ -23,6 +27,7 @@
 	.show_phone {
 		display: block;
 	}
+
 	.hide_phone {
 		display: none;
 	}
@@ -32,6 +37,7 @@
 	.show_pad {
 		display: block;
 	}
+
 	.hide_pad {
 		display: none;
 	}
@@ -41,6 +47,7 @@
 	.show_pc {
 		display: block;
 	}
+
 	.hide_pc {
 		display: none;
 	}
@@ -273,6 +280,7 @@
 }
 
 @media (min-width:576px) {
+
 	.container,
 	.container-sm {
 		max-width: 33.75rem

@@ -326,6 +326,7 @@ ol.mm_list li::before {
 .mm_info .mm_item {
 	border-top: none;
 	border-bottom: none;
+	overflow: hidden;
 }
 
 .mm_info .title {

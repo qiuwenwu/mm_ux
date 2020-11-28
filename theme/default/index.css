@@ -149,63 +149,64 @@ ol.mm_list li:nth-child(3)::before {
 }
 
 .bg_light {
-	background: #F9F9F9 !important;
+	background: var(--color_light) !important;
 	color: var(--color_default);
-	border-color: rgba(125, 125, 125, 0.25);
+	border-color: var(--color_light);
 }
 
 .bg_dark {
+	background: var(--color_dark) !important;
+	color: var(--color_white);
+	border-color: var(--color_dark);
+}
+
+.bg_grey,
+.bg_default {
 	background: var(--color_default) !important;
 	color: var(--color_white);
 	border-color: var(--color_default);
 }
 
-.bg_grey,
-.bg_default {
-	background: var(--color_default_h) !important;
-	color: var(--color_white);
-	border-color: var(--color_default_h);
-}
-
 .bg_red,
-.bg_warning {
-	background: #FF0036 !important;
+.bg_error {
+	background: var(--color_error) !important;
 	color: var(--color_white);
-	border-color: #FF0036;
+	border-color: var(--color_error);
 }
 
 .bg_yellow,
-.bg_danger {
-	background: #fca216 !important;
+.bg_danger,
+.bg_warning {
+	background: var(--color_warning) !important;
 	color: var(--color_white);
-	border-color: #fca216;
+	border-color: var(--color_warning);
 }
 
 .bg_green,
 .bg_success {
-	background: #09BB07 !important;
+	background: var(--color_success) !important;
 	color: var(--color_white);
-	border-color: #09BB07;
+	border-color: var(--color_success);
 }
 
 .bg_cyan,
 .bg_info {
-	background: #00b2d2 !important;
+	background: var(--color_info) !important;
 	color: var(--color_white);
-	border-color: #00b2d2;
+	border-color: var(--color_info);
 }
 
 .bg_blue,
 .bg_primary {
-	background: #38f !important;
+	background: var(--color_primary) !important;
 	color: var(--color_white);
-	border-color: #38f;
+	border-color: var(--color_primary);
 }
 
 .bg_purple {
-	background: #7f39e8 !important;
+	background: var(--color_purple) !important;
 	color: var(--color_white);
-	border-color: #7f39e8;
+	border-color: var(--color_purple);
 }
 
 .bg_no {
@@ -214,12 +215,12 @@ ol.mm_list li:nth-child(3)::before {
 
 /* 字体颜色 */
 .font_black {
-	color: #333 !important;
+	color: var(--color_black) !important;
 }
 
 .font_dark,
 .font_default {
-	color: var(--color_default) !important;
+	color: var(--color_dark) !important;
 }
 
 .font_grey {
@@ -227,7 +228,7 @@ ol.mm_list li:nth-child(3)::before {
 }
 
 .font_light {
-	color: #ccc !important;
+	color: var(--color_light) !important;
 }
 
 .font_red,
@@ -292,7 +293,7 @@ ol.mm_list li:nth-child(3)::before {
 /* 按钮 */
 .btn_default-x {
 	color: var(--color_default);
-	border-color: rgba(125, 125, 125, 0.25);
+	border-color: var(--color_default);
 }
 
 .btn_error-x {
@@ -392,6 +393,7 @@ ol.mm_list li:nth-child(3)::before {
 
 .btn_link {
 	border: none;
+	color: inherit;
 	background: none;
 }
 
@@ -477,34 +479,34 @@ ol.mm_list li:nth-child(3)::before {
 
 .btn_default:active {
 	background-color: var(--color_default_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 .btn_error:active {
 	background-color: var(--color_error_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 .btn_success:active {
 	background-color: var(--color_success_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 .btn_primary:active {
 	background-color: var(--color_primary_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 
 .btn_danger:active,
 .btn_warning:active {
 	background-color: var(--color_warning_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 .btn_info:active {
 	background-color: var(--color_info_b);
-	color: #fff
+	color: var(--color_white)
 }
 
 /* 表格样式 */
