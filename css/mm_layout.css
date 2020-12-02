@@ -269,6 +269,7 @@ ol.mm_list li::before {
 .mm_item {
 	position: relative;
 	padding: var(--padding_mini) var(--padding_base);
+	width: 100%;
 }
 
 .mm_item .title,
@@ -278,12 +279,12 @@ ol.mm_list li::before {
 
 .item-ltb .media {
 	float: left;
-	margin-right: var(--margin_base);
+	margin-right: var(--margin_small);
 }
 
 .item-rtb .media {
 	float: right;
-	margin-left: var(--margin_base);
+	margin-left: var(--margin_small);
 }
 
 .item-ll .media,
@@ -296,7 +297,7 @@ ol.mm_list li::before {
 .item-lr .title {
 	float: left;
 	margin-right: var(--margin_small);
-	min-width: 2.5rem;
+	min-width: 2rem;
 }
 
 .item-lr .content {
@@ -306,10 +307,12 @@ ol.mm_list li::before {
 .item-rl .media,
 .item-rr .media {
 	float: right;
+	margin-left: var(--margin_small);
 }
 
 .item-rl .title {
 	float: left;
+	margin-right: var(--margin_small);
 }
 .item-rr .title {
 	float: right;
